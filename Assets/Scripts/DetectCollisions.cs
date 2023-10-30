@@ -4,25 +4,37 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) //destroys obstacles when collided with.
     {
         if (other.CompareTag("Obstacle"))
         {
+
             Destroy(gameObject);
             Destroy(other.gameObject);
+
         }
 
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.tag == "Obstacle")
+        {
+            ScoreManager.totalScore += 1;
+        }
+    }
+
 }
