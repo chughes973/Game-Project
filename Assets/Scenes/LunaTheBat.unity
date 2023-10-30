@@ -918,6 +918,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 974174871803534735, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 534669906}
     - target: {fileID: 8057318546530198160, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
       propertyPath: playerAudio
       value: 

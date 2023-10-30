@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LunaTheBat.unity
+    guid: 0485ac1c2d51bd540af1b29a98e5c0fc
   m_configObjects: {}

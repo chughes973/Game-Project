@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dirtParticle;
     public AudioClip jumpSound;
     public AudioClip crashSound;
-    private AudioSource playerAudio;
+    public AudioSource playerAudio;
     public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
             explosionParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f);
-
         } 
     }
         
