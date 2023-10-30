@@ -13,7 +13,7 @@ public class PowerUpObtained : MonoBehaviour
         if (other.CompareTag("PowerUp"))
         {
             Destroy(other.gameObject);
-            ScoreManager.totalScore += 1; //score is increased by 1 and game object is destroyed  
+            ScoreManager.totalScore += 5; //score is increased by 1 and game object is destroyed  
         }
     }
 
