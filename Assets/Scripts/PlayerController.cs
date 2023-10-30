@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         //&& !gameOver stops the player from being able to jump when unconscious
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver) //hitting space makes player jump
         {
-            playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * 17, ForceMode.Impulse);
             isOnGround = false;
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
