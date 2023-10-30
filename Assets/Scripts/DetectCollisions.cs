@@ -24,17 +24,8 @@ public class DetectCollisions : MonoBehaviour
 
             Destroy(gameObject);
             Destroy(other.gameObject);
-
-        }
-
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.transform.tag == "Obstacle")
-        {
             ScoreManager.totalScore += 1;
         }
-    }
 
+    
 }
