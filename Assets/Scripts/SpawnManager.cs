@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,8 +16,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
-        InvokeRepeating("SpawnPowerUp", startDelay, repeatRate);
+        InvokeRepeating("SpawnObstacle", startDelay, repeatRate); //repeating of obstacle spawn
+        InvokeRepeating("SpawnPowerUp", startDelay, repeatRate); //repeating of powerup spawn
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
         
 
@@ -30,20 +31,20 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnObstacle()
     {
-        //repeats spawning of obstacle 
+        //initial spawn of obstacle
         if (playerControllerScript.gameOver == false)
         {
-            Instantiate(obstaclePrefab, spawnPosObs, obstaclePrefab.transform.rotation);
+            Instantiate(obstaclePrefab, spawnPosObs, obstaclePrefab.transform.rotation); //spawns boxes
         }
 
     }
 
     void SpawnPowerUp()
     {
-        //repeats spawning of powerups as long as game isn't over
+        //initial spawn of powerup
         if (playerControllerScript.gameOver == false)
         {
-            Instantiate(powerupPrefab, spawnPosPU, powerupPrefab.transform.rotation);
+            Instantiate(powerupPrefab, spawnPosPU, powerupPrefab.transform.rotation); //spawns powerup pumpkins
         }
     }
 }

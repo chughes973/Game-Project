@@ -10,12 +10,12 @@ public class PowerUpObtained : MonoBehaviour
     public AudioClip powerupConsume;
 
 
-    void OnTriggerEnter(Collider other) //destroys obstacles when collided with projectile.
+    void OnTriggerEnter(Collider other) //destroys PowerUp / Pumpkin when collided with Player.
     {
         if (other.CompareTag("PowerUp"))
         {
-            Destroy(other.gameObject);
-            playerAudio.PlayOneShot(powerupConsume, 1.0f);
+            Destroy(other.gameObject); //makes powerup disappear
+            playerAudio.PlayOneShot(powerupConsume, 1.0f); //eating sound plays when player collides with powerup
             ScoreManager.totalScore += 5; //score is increased by 1 and game object is destroyed  
             
         }

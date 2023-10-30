@@ -14,6 +14,6 @@ public class MoveRight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right * Time.deltaTime * speed);
+        transform.Translate(Vector3.right * Time.deltaTime * speed); //moves powerup in same direction as boxes, ground and background but unsure why it needed to be right.
     }
 }

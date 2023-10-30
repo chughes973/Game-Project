@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
 
     private void OnGUI()
     {
+        //creates a scoreboard
         GUI.Box(new Rect(100, 100, 200, 100), "Score : " + totalScore.ToString()); //scoreboard 
     }
 

@@ -10,7 +10,7 @@ public class RepeatBackground : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
-        repeatWidth = GetComponent<BoxCollider>().size.x / 2.4f;
+        repeatWidth = GetComponent<BoxCollider>().size.x / 2.4f; //repeats background at roughly just udner the half way point
 
     }
 
@@ -19,7 +19,7 @@ public class RepeatBackground : MonoBehaviour
     {
         if (transform.position.x < startPos.x - repeatWidth) //restarts background when player reaches middle of backdrop
         {
-            transform.position = startPos;
+            transform.position = startPos; //starts it from start position when triggered
         }
     }
 }

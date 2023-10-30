@@ -22,8 +22,8 @@ public class DetectCollisions : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
 
-            Destroy(gameObject);
-            Destroy(other.gameObject);
+            Destroy(gameObject); //destroys projectile
+            Destroy(other.gameObject);//destroys box
             ScoreManager.totalScore += 1; //score is increased by 1 and game object is destroyed  
         }
     }

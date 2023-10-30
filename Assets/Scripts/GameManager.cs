@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public void AddLives(int value)
     {
+        //managing lives
         lives += value;
         if (lives <= 0)
         {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
     }
     public void AddScore(int value)
     {
+        //Managing Score
         score += value;
         Debug.Log("Score = " + score);
     }
