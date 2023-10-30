@@ -58,16 +58,24 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\MoveRight.cs" />
+    <Compile Include="Assets\Toon Killers &amp; Survivors\DemoScripts\RotateOver.cs" />
+    <Compile Include="Assets\Scripts\DetectCollisions.cs" />
     <Compile Include="Assets\Scripts\GameObjectSize.cs" />
+    <Compile Include="Assets\Scripts\DestroyOutOfBounds.cs" />
     <Compile Include="Assets\Scripts\MoveLeft.cs" />
     <Compile Include="Assets\Scripts\RepeatBackground.cs" />
     <Compile Include="Assets\Scripts\SpawnManager.cs" />
+    <Compile Include="Assets\Toon Killers &amp; Survivors\DemoScripts\AnimationToButton.cs" />
+    <Compile Include="Assets\Toon Killers &amp; Survivors\DemoScripts\CharChanger.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Course Library\_Source_Files\Materials\UnlitVertexColour_Alpha.shader" />
-    <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />
-    <None Include="Assets\FreeAssetsFromStore\HandPaintedWoodenCrate\readme.txt" />
+    <None Include="Assets\Prototype3CourseLibrary\_Source_Files\Materials\UnlitVertexColour_Alpha.shader" />
+    <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
+    <None Include="Assets\Prototype3CourseLibrary\_Source_Files\_LICENSE.txt" />
+    <None Include="Assets\FreeAssetsFromStore\Wooden Crate Obstacle\readme.txt" />
+    <None Include="Assets\Hovl Studio\Procedural fire\Demo scene\Readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

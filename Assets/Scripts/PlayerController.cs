@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip crashSound;
     private AudioSource playerAudio;
+    public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //&& !gameOver stops the player from being able to jump when unconscious
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver) //hitting space makes player jump
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            //Launch projectile from player
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver) //hitting space makes player jump and stops player jumping while unconscious
         {
             playerRb.AddForce(Vector3.up * 17, ForceMode.Impulse);
             isOnGround = false;
@@ -44,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isOnGround = true;
+            isOnGround = true; //prevents player double jumping
             dirtParticle.Play();
         }
         else if (collision.gameObject.CompareTag("Obstacle"))
