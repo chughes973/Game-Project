@@ -17,7 +17,7 @@ public class DetectCollisions : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other) //destroys obstacles when collided with.
+    void OnTriggerEnter(Collider other) //destroys obstacles when collided with projectile.
     {
         if (other.CompareTag("Obstacle"))
         {

@@ -64,6 +64,8 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f);
 
-        }
+        } 
     }
-}
+        
+    }
+

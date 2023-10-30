@@ -1,31 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUpObtained : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject prefabToDestroy; //assign the prefab to destroy, in this case it's the powerup
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    void OnTriggerEnter(Collider other) //destroys obstacles when collided with.
+    void OnTriggerEnter(Collider other) //destroys obstacles when collided with projectile.
     {
-        if (other.CompareTag("Obstacle"))
+        if (other.CompareTag("PowerUp"))
         {
-
-            Destroy(gameObject);
-            Debug.Log("PowerUp!"); //Powerup is consumed and message displayed
-            ScoreManager.totalScore += 5; // increases points by 5 if powerup is consumed 
+            Destroy(other.gameObject);
+            ScoreManager.totalScore += 1; //score is increased by 1 and game object is destroyed  
         }
     }
+
 }
+
 
 
