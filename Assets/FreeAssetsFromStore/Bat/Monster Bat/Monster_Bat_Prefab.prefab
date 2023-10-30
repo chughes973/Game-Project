@@ -167,6 +167,8 @@ GameObject:
   - component: {fileID: 7508579598282725099}
   - component: {fileID: 974174871803534735}
   - component: {fileID: 6209264195551990360}
+  - component: {fileID: 8057318546530198160}
+  - component: {fileID: 319803058549720566}
   m_Layer: 0
   m_Name: Monster_Bat_Prefab
   m_TagString: Player
@@ -203,8 +205,6 @@ Animation:
   m_Animation: {fileID: 7400000, guid: b13df63982ffc744db2c0809b4977e14, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: b13df63982ffc744db2c0809b4977e14, type: 3}
-  - {fileID: 7400000, guid: 0725be1add4eabd4c82813bd9dabfcfc, type: 2}
-  - {fileID: 7400026, guid: d55a3dafe23105e409ee70d6605cbd49, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -238,10 +238,10 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625221395402176}
   serializedVersion: 4
-  m_Mass: 2
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 2
+  m_AngularDrag: 5
+  m_CenterOfMass: {x: 0, y: 0.02, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 0}
   m_IncludeLayers:
@@ -309,8 +309,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: f6b0e0fe4d415b544a8eb0d96c11c088, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -395,6 +395,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8057318546530198160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625221395402176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e3232d84a39bf47b073c6f9256861c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToDestroy: {fileID: 7130553259912702913, guid: 1448997ad70145e418fc079de8585457, type: 3}
+  playerAudio: {fileID: 0}
+  powerupConsume: {fileID: 8300000, guid: f6b0e0fe4d415b544a8eb0d96c11c088, type: 3}
+--- !u!114 &319803058549720566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625221395402176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ea4c12fb3e3e740bf3a32d28a55c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1809875507653856
 GameObject:
   m_ObjectHideFlags: 0
