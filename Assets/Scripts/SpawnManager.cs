@@ -5,7 +5,9 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject obstaclePrefab;
-    private Vector3 spawnPos = new Vector3(25, 0, 0);
+    public GameObject powerupPrefab;
+    private Vector3 spawnPosObs = new Vector3(25, 0, 0);
+    private Vector3 spawnPosPU = new Vector3(50, 0, 0);
     private float startDelay = 2.0f;
     private float repeatRate = 2.0f;
     private PlayerController playerControllerScript;
@@ -14,8 +16,10 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
-        playerControllerScript =
-            GameObject.Find("Player").GetComponent<PlayerController>();
+        InvokeRepeating("SpawnPowerUp", startDelay, repeatRate);
+        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        
+
     }
 
     // Update is called once per frame
@@ -26,11 +30,20 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnObstacle()
     {
-        //repeats spawning of obstacle
+        //repeats spawning of obstacle 
         if (playerControllerScript.gameOver == false)
         {
-            Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+            Instantiate(obstaclePrefab, spawnPosObs, obstaclePrefab.transform.rotation);
         }
 
+    }
+
+    void SpawnPowerUp()
+    {
+        //repeats spawning of powerups as long as game isn't over
+        if (playerControllerScript.gameOver == false)
+        {
+            Instantiate(powerupPrefab, spawnPosPU, powerupPrefab.transform.rotation);
+        }
     }
 }

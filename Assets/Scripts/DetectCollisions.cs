@@ -24,8 +24,8 @@ public class DetectCollisions : MonoBehaviour
 
             Destroy(gameObject);
             Destroy(other.gameObject);
-            ScoreManager.totalScore += 1;
+            ScoreManager.totalScore += 1; //score is increased by 1 and game object is destroyed  
         }
-
+    }
     
 }

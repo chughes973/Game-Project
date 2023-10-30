@@ -5,12 +5,19 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+
     public static int totalScore = 0;
+
+
+    private void Start()
+    {
+
+    }
 
     private void OnGUI()
     {
-        GUI.Box(new Rect(100, 100, 200, 100), "Score : " + totalScore.ToString());
+        GUI.Box(new Rect(100, 100, 200, 100), "Score : " + totalScore.ToString()); //scoreboard 
     }
 
 }
-    // Start is called before the first frame update
+
