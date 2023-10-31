@@ -22,7 +22,7 @@ public class EnemyHit : MonoBehaviour
         {
 
             Destroy(gameObject); //destroys projectile
-            Destroy(other.gameObject);//destroys enemy when hit
+            Destroy(other.gameObject);//destroys enemy when hit - need to change to be death animation and then destroy in next iteration
             ScoreManager.totalScore += 10; //score is increased by 1 and game object is destroyed  
         }
     }
