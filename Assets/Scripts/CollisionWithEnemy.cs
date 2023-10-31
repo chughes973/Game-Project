@@ -33,8 +33,8 @@ public class CollisionWithEnemy : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
 
-            Destroy(gameObject); //destroys player
-            ScoreManager.lives+= 1;
+            Destroy(other.gameObject); //destroys enemy upon collision with player
+            ScoreManager.lives-= 1; //decreases lives by 1 upon collision with enemy prefab
         }
     }
 }
