@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
             //Launch projectile from player
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver) //hitting space makes player jump and stops player jumping while unconscious
         {
             playerRb.AddForce(Vector3.up * 17, ForceMode.Impulse);
@@ -63,8 +63,7 @@ public class PlayerController : MonoBehaviour
             explosionParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f); //this audio keeps disabling? Unsure why but will work on this following alpha submission 
-        } 
-    }
-        
+        }
     }
 
+}

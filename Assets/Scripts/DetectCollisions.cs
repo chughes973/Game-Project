@@ -27,5 +27,5 @@ public class DetectCollisions : MonoBehaviour
             ScoreManager.totalScore += 1; //score is increased by 1 and game object is destroyed  
         }
     }
-    
+
 }
