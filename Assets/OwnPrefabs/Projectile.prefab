@@ -14627,6 +14627,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389102d617e8943418f66d4eb4425547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAudio: {fileID: 0}
+  enemyKilledAudio: {fileID: 8300000, guid: efec5f3a773b84f5fa2ae40719d54aea, type: 3}
 --- !u!1 &7976225978596944511
 GameObject:
   m_ObjectHideFlags: 0
