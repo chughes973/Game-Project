@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f); //this audio keeps disabling? Unsure why but will work on this following alpha submission 
         }
+        
     }
 
 }
