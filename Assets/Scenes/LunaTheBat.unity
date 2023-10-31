@@ -996,18 +996,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4085869397129016, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4085869397129016, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4085869397129016, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4085869397129016, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1046,18 +1034,6 @@ PrefabInstance:
     - target: {fileID: 4085869397129016, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 319803058549720566, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
-      propertyPath: crashSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
-    - target: {fileID: 319803058549720566, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
-      propertyPath: playerAudio
-      value: 
-      objectReference: {fileID: 534669906}
-    - target: {fileID: 319803058549720566, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
-      propertyPath: gameOverText
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 974174871803534735, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
       propertyPath: playerAudio

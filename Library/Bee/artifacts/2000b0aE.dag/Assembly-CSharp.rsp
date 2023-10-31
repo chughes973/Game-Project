@@ -337,6 +337,7 @@
 "Assets/Scripts/DestroyOutOfBounds.cs"
 "Assets/Scripts/DetectCollisions.cs"
 "Assets/Scripts/EnemyAnimator.cs"
+"Assets/Scripts/EnemyHit.cs"
 "Assets/Scripts/EnemySpawnManager.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/MoveEnemyLeft.cs"
