@@ -34,7 +34,7 @@ public class CollisionWithEnemy : MonoBehaviour
         {
 
             Destroy(other.gameObject); //destroys enemy upon collision with player
-            ScoreManager.lives-= 1; //decreases lives by 1 upon collision with enemy prefab
+            //ScoreManager.lives-= 1; //decreases lives by 1 upon collision with enemy prefab
         }
     }
 }

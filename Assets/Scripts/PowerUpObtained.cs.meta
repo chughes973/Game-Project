@@ -3,10 +3,7 @@ guid: 97e3232d84a39bf47b073c6f9256861c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - prefabToDestroy: {instanceID: 0}
-  - playerAudio: {instanceID: 0}
-  - powerupConsume: {fileID: 8300000, guid: f6b0e0fe4d415b544a8eb0d96c11c088, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

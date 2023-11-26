@@ -812,6 +812,14 @@
         "dependencies": [
           {
             "name": "Font",
+            "scenes": [
+              "Assets/Scenes/LunaTheBat.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "TextMesh",
             "scenes": [],
             "dependencyType": 0,
             "icon": null

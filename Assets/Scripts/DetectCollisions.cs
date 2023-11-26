@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    private GameManager gameManager;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
     }
 
@@ -24,7 +27,7 @@ public class DetectCollisions : MonoBehaviour
 
             Destroy(gameObject); //destroys projectile
             Destroy(other.gameObject);//destroys box
-            ScoreManager.totalScore += 1; //score is increased by 1 and game object is destroyed  
+            gameManager.UpdateScore(1); //score is increased by 1 and game object is destroyed  
         }
     }
 

@@ -1,22 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int score = 0;
-    private int lives = 3;
+    public TextMeshProUGUI scoreText;
+    public static int totalScore;
+    public static int lives = 3;
 
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        totalScore = 0;
+        UpdateScore(0);
     }
 
     public void AddLives(int value)
@@ -30,11 +27,10 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("Lives = " + lives);
     }
-    public void AddScore(int value)
-    {
-        //Managing Score
-        score += value;
-        Debug.Log("Score = " + score);
-    }
 
+    public void UpdateScore(int scoreToAdd)
+    {
+        totalScore += scoreToAdd;
+        scoreText.text = "Score: " + totalScore;
+    }
 }
