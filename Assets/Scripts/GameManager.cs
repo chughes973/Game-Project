@@ -34,4 +34,7 @@ public class GameManager : MonoBehaviour
         totalScore += scoreToAdd;
         scoreText.text = "Score: " + totalScore;
     }
+
+
+    
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public AudioClip crashSound;
     public AudioSource playerAudio;
     public GameObject projectilePrefab;
+    public GameManager gameManager;
+    public TextMeshProUGUI gameOverText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,7 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         Physics.gravity *= gravityModifier; //allows player to adjust the gravity 
         playerAudio = GetComponent<AudioSource>(); //enables audio to play 
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
     }
 
@@ -63,8 +68,16 @@ public class PlayerController : MonoBehaviour
             explosionParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f); //this audio keeps disabling? Unsure why but will work on this following alpha submission 
+            GameOver();
+
         }
-        
+
     }
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+
+    }
+
 
 }
