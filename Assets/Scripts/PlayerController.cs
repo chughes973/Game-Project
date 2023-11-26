@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
+        gameManager.restartButton.gameObject.SetActive(true);
 
     }
 

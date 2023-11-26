@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static int totalScore;
     public static int lives = 3;
     public List <GameObject> targets;
+    public Button restartButton;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,9 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + totalScore;
     }
 
-
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     
 }
