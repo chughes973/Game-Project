@@ -9696,8 +9696,7 @@ GameObject:
   - component: {fileID: -4603488325794567627}
   - component: {fileID: -3870650459522727882}
   - component: {fileID: -3959385636459425268}
-  - component: {fileID: 4704885210581029841}
-  - component: {fileID: -6830631787577273276}
+  - component: {fileID: -6362168399447381642}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Projectile
@@ -14572,7 +14571,7 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 0.3307023, z: 0.33308733}
@@ -14616,7 +14615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ea4c12fb3e3e740bf3a32d28a55c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4704885210581029841
+--- !u!114 &-6362168399447381642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14628,22 +14627,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389102d617e8943418f66d4eb4425547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   enemyPrefab: {fileID: 4673252023775396157, guid: f9bf79313350ae54dab6ede98fc1430f, type: 3}
   playerAudio: {fileID: 0}
-  enemyKilled: {fileID: 8300000, guid: 88a647aa1d2a64de0b8000593319f012, type: 3}
---- !u!114 &-6830631787577273276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4006752830601189912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98f29b0ef859b5446a569e38dd8abd4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointValue: 10
+  enemyKilled: {fileID: 0}
 --- !u!1 &7976225978596944511
 GameObject:
   m_ObjectHideFlags: 0

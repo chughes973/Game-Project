@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public static int totalScore;
     public static int lives = 3;
+    public List <GameObject> targets;
 
     // Start is called before the first frame update
     void Start()

@@ -29,6 +29,9 @@ public class DetectCollisions : MonoBehaviour
             Destroy(other.gameObject);//destroys box
             gameManager.UpdateScore(1); //score is increased by 1 and game object is destroyed  
         }
+        
     }
+
+
 
 }

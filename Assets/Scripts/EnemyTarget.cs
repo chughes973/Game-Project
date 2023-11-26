@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleTarget : MonoBehaviour
+public class EnemyTarget : MonoBehaviour
 {
     private Rigidbody targetRb;
-    private GameManager gameManager;
+    public GameManager gameManager;
     public int pointValue;
 
     // Start is called before the first frame update
@@ -22,16 +22,13 @@ public class ObstacleTarget : MonoBehaviour
     {
 
     }
-    public void DestroyTarget()
+    void OnTriggerEnter(Collider other) //destroys PowerUp / Pumpkin when collided with Player.
     {
-
-        if (CompareTag("Enemy"))
+        if (other.CompareTag("Enemy"))
         {
-            Destroy(gameObject); //makes powerup disappear
-            gameManager.UpdateScore(5);//score is increased by 1 and game object is destroyed  
-
+            gameManager.UpdateScore(10); //score is increased by 10 and game object is destroyed  
+            Destroy(other.gameObject); //makes enemy disappear
 
         }
-
     }
 }

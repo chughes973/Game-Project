@@ -28,7 +28,7 @@ public class CollisionWithEnemy : MonoBehaviour
         }
     }*/
 
-    void OnTriggerEnter(Collider other) //destroys obstacles when collided with projectile.
+    void OnTriggerEnter(Collider other) 
     {
         if (other.CompareTag("Enemy"))
         {

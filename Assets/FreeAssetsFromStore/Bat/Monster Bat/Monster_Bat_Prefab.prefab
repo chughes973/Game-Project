@@ -167,8 +167,10 @@ GameObject:
   - component: {fileID: 7508579598282725099}
   - component: {fileID: 974174871803534735}
   - component: {fileID: 6209264195551990360}
-  - component: {fileID: 8057318546530198160}
   - component: {fileID: 319803058549720566}
+  - component: {fileID: 7621572427803634421}
+  - component: {fileID: 2762399754406272801}
+  - component: {fileID: 1880374942600666296}
   m_Layer: 0
   m_Name: Monster_Bat_Prefab
   m_TagString: Player
@@ -273,7 +275,7 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.6825477, y: 0.47579834, z: 0.7212469}
@@ -396,21 +398,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8057318546530198160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625221395402176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e3232d84a39bf47b073c6f9256861c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToDestroy: {fileID: 7130553259912702913, guid: 1448997ad70145e418fc079de8585457, type: 3}
-  playerAudio: {fileID: 0}
-  powerupConsume: {fileID: 8300000, guid: f6b0e0fe4d415b544a8eb0d96c11c088, type: 3}
 --- !u!114 &319803058549720566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,6 +410,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ea4c12fb3e3e740bf3a32d28a55c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7621572427803634421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625221395402176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5f15be3be87fe44900f1edd9142a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 4673252023775396157, guid: f9bf79313350ae54dab6ede98fc1430f, type: 3}
+--- !u!114 &2762399754406272801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625221395402176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e3232d84a39bf47b073c6f9256861c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  prefabToDestroy: {fileID: 7130553259912702913, guid: 1448997ad70145e418fc079de8585457, type: 3}
+  playerAudio: {fileID: 6209264195551990360}
+  powerupConsume: {fileID: 8300000, guid: 35b84eed34293864ea94275694cd69ba, type: 3}
+--- !u!114 &1880374942600666296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625221395402176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0b7904a21c3a84482d9d11ba308207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  prefabtoDestroy: {fileID: 7130553259912702913, guid: 1448997ad70145e418fc079de8585457, type: 3}
+  playerAudio: {fileID: 0}
+  powerupConsume: {fileID: 8300000, guid: 35b84eed34293864ea94275694cd69ba, type: 3}
+  pointValue: 5
 --- !u!1 &1809875507653856
 GameObject:
   m_ObjectHideFlags: 0
