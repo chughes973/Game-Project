@@ -12,12 +12,12 @@ public class GameManager : MonoBehaviour
     public static int lives = 3;
     public List <GameObject> targets;
     public Button restartButton;
+    public GameObject titleScreen;
 
     // Start is called before the first frame update
     void Start()
     {
-        totalScore = 0;
-        UpdateScore(0);
+        
     }
 
     public void AddLives(int value)
@@ -36,6 +36,13 @@ public class GameManager : MonoBehaviour
     {
         totalScore += scoreToAdd;
         scoreText.text = "Score: " + totalScore;
+    }
+
+    public void StartGame(int difficulty)
+    {
+        totalScore = 0;
+        UpdateScore(0);
+        titleScreen.gameObject.SetActive(false);
     }
 
     public void RestartGame()

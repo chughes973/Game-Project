@@ -17,7 +17,7 @@ public class EnemyHit : MonoBehaviour
     void Start()
     {
         targetRb = GetComponent<Rigidbody>();
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void OnTriggerEnter(Collider other) //destroys obstacles when collided with projectile.
