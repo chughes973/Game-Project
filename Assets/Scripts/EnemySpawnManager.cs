@@ -9,10 +9,11 @@ public class EnemySpawnManager : MonoBehaviour
     public GameObject enemyPrefab;
     private PlayerController playerControllerScript;
     private EnemySpawnManager spawnEnemyManagerScript;
+    private MoveEnemyLeft moveEnemyLeft;
 
     private Vector3 spawnPosEnemy = new Vector3(30, 0, 0);
-    private float startDelay = 2.0f;
-    private float repeatRate = 15f;
+    public float startDelay = 2.0f;
+    private float repeatRate = 5f;
     public float speed;
 
 
@@ -32,18 +33,12 @@ public class EnemySpawnManager : MonoBehaviour
     {
     }
 
-    void SpawnEnemy()
+   public void SpawnEnemy()
     {
-        SpawnEnemyCoroutine();
         Instantiate(enemyPrefab, spawnPosEnemy, enemyPrefab.transform.rotation); //spawns skeletons
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-
+    
     }
 
-    IEnumerator SpawnEnemyCoroutine()
-    {
-        yield return new WaitForSeconds(startDelay); //delays spawning
-        SpawnEnemy();
-    }
 
 }

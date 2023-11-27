@@ -13,21 +13,34 @@ public class GameManager : MonoBehaviour
     public List <GameObject> targets;
     public Button restartButton;
     public GameObject titleScreen;
+    public GameObject gameOverScreen;
+    public EnemySpawnManager enemySpawnManager;
+    public MoveEnemyLeft moveEnemyLeft;
+    public MoveLeft moveLeft;
+    public bool isGameActive;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        isGameActive = true;
+        totalScore = 0;
+        enemySpawnManager = GetComponent<EnemySpawnManager>();
+        titleScreen.gameObject.SetActive(true);
+
     }
 
-    public void AddLives(int value)
+    public void AddLives(int livesToRemove)
     {
         //managing lives
-        lives += value;
+        lives += livesToRemove;
         if (lives <= 0)
         {
+            gameOverScreen.gameObject.SetActive(true);
+            titleScreen.gameObject.SetActive(false);
             Debug.Log("Game Over");
             lives = 0;
+            
+
         }
         Debug.Log("Lives = " + lives);
     }
@@ -40,9 +53,11 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(int difficulty)
     {
+        isGameActive = true;
         totalScore = 0;
         UpdateScore(0);
-        titleScreen.gameObject.SetActive(false);
+        titleScreen.gameObject.SetActive(true);
+        enemySpawnManager.startDelay /= difficulty;
     }
 
     public void RestartGame()

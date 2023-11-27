@@ -6,10 +6,12 @@ public class CollisionWithEnemy : MonoBehaviour
 {
 
     public GameObject enemyPrefab;
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -18,15 +20,6 @@ public class CollisionWithEnemy : MonoBehaviour
         
     }
 
-    /*private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(other.gameObject);
-            //destroys enemy when hit - need to change to be death animation and then destroy in next iteration
-            ScoreManager.lives -= 1; //lives is decreased by 1 and enemy is destroyed  
-        }
-    }*/
 
     void OnTriggerEnter(Collider other) 
     {
@@ -35,7 +28,7 @@ public class CollisionWithEnemy : MonoBehaviour
 
             Destroy(other.gameObject); //destroys enemy upon collision with player
             
-            //ScoreManager.lives-= 1; //decreases lives by 1 upon collision with enemy prefab
+            gameManager.AddLives(-1); //decreases lives by 1 upon collision with enemy prefab
         }
     }
 }
