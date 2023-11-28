@@ -53,9 +53,10 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = true;
         titleScreen.gameObject.SetActive(false);
+        enemySpawnManager.SpawnEnemy();
         totalScore = 0;
         UpdateScore(0);
-        enemySpawnManager.speed /= difficulty;
+
     }
 
     public void RestartGame()

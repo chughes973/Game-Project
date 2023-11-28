@@ -14627,8 +14627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389102d617e8943418f66d4eb4425547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  enemyPrefab: {fileID: 4673252023775396157, guid: f9bf79313350ae54dab6ede98fc1430f, type: 3}
+  enemyPrefab: {fileID: 3434936497642236683, guid: da1388dded75d8841a0eac45d5a7dfd1, type: 3}
   playerAudio: {fileID: 0}
   enemyKilled: {fileID: 0}
 --- !u!1 &7976225978596944511
