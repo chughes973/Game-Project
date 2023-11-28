@@ -30,4 +30,8 @@ public class EnemyHit : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
 }

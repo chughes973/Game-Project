@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         Physics.gravity *= gravityModifier; //allows player to adjust the gravity 
         playerAudio = GetComponent<AudioSource>(); //enables audio to play 
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
     }
 
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver) //hitting space makes player jump and stops player jumping while unconscious
         {
-            playerRb.AddForce(Vector3.up * 17, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * 15, ForceMode.Impulse);
             isOnGround = false;
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
@@ -68,17 +68,17 @@ public class PlayerController : MonoBehaviour
             explosionParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f); //this audio keeps disabling? Unsure why but will work on this following alpha submission 
-            GameOver();
+            gameManager.GameOver();
 
         }
 
     }
-    public void GameOver()
+     /*void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
         gameManager.restartButton.gameObject.SetActive(true);
 
-    }
+    }*/
 
 
 }
