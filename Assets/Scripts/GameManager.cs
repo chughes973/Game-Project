@@ -22,10 +22,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isGameActive = true;
-        totalScore = 0;
-        enemySpawnManager = GetComponent<EnemySpawnManager>();
         titleScreen.gameObject.SetActive(true);
+
 
     }
 
@@ -54,10 +52,10 @@ public class GameManager : MonoBehaviour
     public void StartGame(int difficulty)
     {
         isGameActive = true;
+        titleScreen.gameObject.SetActive(false);
         totalScore = 0;
         UpdateScore(0);
-        titleScreen.gameObject.SetActive(true);
-        enemySpawnManager.startDelay /= difficulty;
+        enemySpawnManager.speed /= difficulty;
     }
 
     public void RestartGame()

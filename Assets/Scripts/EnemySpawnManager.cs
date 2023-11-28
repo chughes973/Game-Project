@@ -9,6 +9,7 @@ public class EnemySpawnManager : MonoBehaviour
     public GameObject enemyPrefab;
     private PlayerController playerControllerScript;
     private EnemySpawnManager spawnEnemyManagerScript;
+    private GameManager gameManager;
     private MoveEnemyLeft moveEnemyLeft;
 
     private Vector3 spawnPosEnemy = new Vector3(30, 0, 0);
@@ -20,10 +21,11 @@ public class EnemySpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        InvokeRepeating("SpawnEnemy", startDelay, repeatRate) ; //loops spawning of enemys with first spawning after 2 secs and then repeating every 20 secs
-        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-
+        if (gameManager.isGameActive == true)
+        {
+            InvokeRepeating("SpawnEnemy", startDelay, repeatRate); //loops spawning of enemys with first spawning after 2 secs and then repeating every 20 secs
+            playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        }
 
 
     }

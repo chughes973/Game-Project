@@ -12,6 +12,7 @@ public class SpawnManager : MonoBehaviour
     private float startDelay = 2.0f;
     private float repeatRate = 2.0f;
     private PlayerController playerControllerScript;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,8 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnObstacle", startDelay, repeatRate); //repeating of obstacle spawn
         InvokeRepeating("SpawnPowerUp", startDelay, repeatRate); //repeating of powerup spawn
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
 
     }
 
@@ -32,7 +34,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnObstacle()
     {
         //initial spawn of obstacle
-        if (playerControllerScript.gameOver == false)
+        if (playerControllerScript.gameOver == false && gameManager.isGameActive == true)
         {
             Instantiate(obstaclePrefab, spawnPosObs, obstaclePrefab.transform.rotation); //spawns boxes
         }
@@ -42,7 +44,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnPowerUp()
     {
         //initial spawn of powerup
-        if (playerControllerScript.gameOver == false)
+        if (playerControllerScript.gameOver == false && gameManager.isGameActive == true)
         {
             Instantiate(powerupPrefab, spawnPosPU, powerupPrefab.transform.rotation); //spawns powerup pumpkins
         }
