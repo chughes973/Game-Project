@@ -28,7 +28,7 @@ public class CollisionWithEnemy : MonoBehaviour
 
             Destroy(other.gameObject); //destroys enemy upon collision with player
             
-            gameManager.AddLives(-1); //decreases lives by 1 upon collision with enemy prefab
+            gameManager.UpdateLives(1); //decreases lives by 1 upon collision with enemy prefab
         }
     }
 }

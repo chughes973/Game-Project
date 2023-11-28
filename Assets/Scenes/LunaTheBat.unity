@@ -1543,6 +1543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 265499355}
+  livesText: {fileID: 2010137980}
   targets:
   - {fileID: 3434936497642236683, guid: da1388dded75d8841a0eac45d5a7dfd1, type: 3}
   restartButton: {fileID: 922041425}
