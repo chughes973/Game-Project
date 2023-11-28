@@ -2,8 +2,10 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CollisionWithEnemy
+    - CollisionWithEnemyProjectile
     - DestroyOutOfBounds
     - DetectCollisions
+    - DifficultyButton
     - EnemyHit
     - EnemySpawnManager
     - GameManager
@@ -13,8 +15,8 @@ ScriptsOnlyBuild:
     - MoveRight
     - PlayerController
     - PowerUpObtained
+    - PowerupTarget
     - RepeatBackground
-    - ScoreManager
     - SpawnManager
     Unity.Play.Publisher.Editor.dll:
     - Unity.Play.Publisher.Editor.AnalyticsHelper
@@ -29,6 +31,12 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
+    Unity.VisualScripting.Core.dll:
+    - Unity.VisualScripting.Variables
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -40,6 +48,11 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   serializedClasses:
     Unity.TextMeshPro:
@@ -56,16 +69,32 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
+    Unity.VisualScripting.Core:
+    - Unity.VisualScripting.SerializationData
     UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
     - UnityEngine.TextCore.GlyphMetrics
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
-  methodsToPreserve: []
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.SpriteState
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: RestartGame
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: StartGame
   sceneClasses:
     Assets/Scenes/LunaTheBat.unity:
     - Class: 1
@@ -119,43 +148,61 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1612}
     - Class: 114
-      Script: {instanceID: 1996}
+      Script: {instanceID: 1998}
     - Class: 114
-      Script: {instanceID: 2180}
+      Script: {instanceID: 2162}
     - Class: 114
-      Script: {instanceID: 2298}
+      Script: {instanceID: 2184}
     - Class: 114
-      Script: {instanceID: 2384}
+      Script: {instanceID: 2302}
     - Class: 114
-      Script: {instanceID: 2622}
+      Script: {instanceID: 2388}
     - Class: 114
-      Script: {instanceID: 2922}
+      Script: {instanceID: 2604}
     - Class: 114
-      Script: {instanceID: 2988}
+      Script: {instanceID: 2626}
     - Class: 114
-      Script: {instanceID: 3146}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 3970}
+      Script: {instanceID: 2926}
     - Class: 114
-      Script: {instanceID: 4078}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 4332}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 4578}
+      Script: {instanceID: 3974}
     - Class: 114
-      Script: {instanceID: 4814}
+      Script: {instanceID: 4082}
     - Class: 114
-      Script: {instanceID: 5042}
+      Script: {instanceID: 4336}
     - Class: 114
-      Script: {instanceID: 5046}
+      Script: {instanceID: 4582}
     - Class: 114
-      Script: {instanceID: 5328}
+      Script: {instanceID: 4816}
     - Class: 114
-      Script: {instanceID: 6080}
+      Script: {instanceID: 5044}
     - Class: 114
-      Script: {instanceID: 6814}
+      Script: {instanceID: 5048}
     - Class: 114
-      Script: {instanceID: 7106}
+      Script: {instanceID: 5330}
+    - Class: 114
+      Script: {instanceID: 5388}
+    - Class: 114
+      Script: {instanceID: 5468}
+    - Class: 114
+      Script: {instanceID: 5606}
+    - Class: 114
+      Script: {instanceID: 5756}
+    - Class: 114
+      Script: {instanceID: 6074}
+    - Class: 114
+      Script: {instanceID: 6090}
+    - Class: 114
+      Script: {instanceID: 6824}
+    - Class: 114
+      Script: {instanceID: 7116}
+    - Class: 114
+      Script: {instanceID: 7388}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -175,6 +222,8 @@ ScriptsOnlyBuild:
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
@@ -199,7 +248,7 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
-      Hash: 532f899a604f80eab4d59c4c0653b5a8
+      Hash: cd8102e31397fa18bef2f19428891fda
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: EnemyHit
@@ -259,7 +308,7 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
-      Hash: 76f8b7c514c32f05bf077936435bc5c0
+      Hash: f1f6f0e39761c8728b5f262c280edae5
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: EnemySpawnManager
@@ -269,6 +318,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerEnterMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 2e9965ed510f61887131d0bb3105f9aa
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CollisionWithEnemyProjectile
   - hash:
       serializedVersion: 2
       Hash: 63815508dfd6cf329d5c593ac8e76888
@@ -313,7 +368,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: c5d297d3501b97884f3360ba812d4519
+      Hash: 85f38e11a2b43f7724cbf90447c3053e
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerController
@@ -449,12 +504,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDropdownValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ScoreManager
   - hash:
       serializedVersion: 2
       Hash: 9f5cca8c22d9a2d2a819c5ba5c0675a8
@@ -593,6 +642,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: VertexShakeB
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Target
   - hash:
       serializedVersion: 2
       Hash: 0286ed84936a6e3c4dba049ae21a7b1c
@@ -739,7 +794,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: bf9b648f83217a2e4cefee3f56d8be50
+      Hash: 501f8ffdc43dc168600bcc77db5f7c0f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PowerUpObtained
@@ -919,16 +974,28 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
+      Hash: 8b071d1203a19ec2b9a9b44311c7f0e5
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: a0ba23e6f2917eb9685b91ba30e56fae
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PowerupTarget
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 0136b3748b8dc4cf050d647564ef12f7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DifficultyButton
   - hash:
       serializedVersion: 2
       Hash: d2938fd574d28d48888d4f06beab689c
@@ -1205,12 +1272,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ScrollRect
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: EnemyAnimator
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
