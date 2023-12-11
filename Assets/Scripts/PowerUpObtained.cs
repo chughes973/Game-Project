@@ -15,7 +15,7 @@ public class PowerUpObtained : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void OnTriggerEnter(Collider other) //destroys PowerUp / Pumpkin when collided with Player.

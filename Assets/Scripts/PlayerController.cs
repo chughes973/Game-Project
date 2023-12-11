@@ -10,11 +10,13 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
     public bool isOnGround = true;
     public bool gameOver = false;
+    public bool hasPowerUp;
     private Animator playerAnim;
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
     public AudioClip jumpSound;
     public AudioClip crashSound;
+    public AudioClip powerupConsume;
     public AudioSource playerAudio;
     public GameObject projectilePrefab;
     public GameManager gameManager;
@@ -73,12 +75,26 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-     /*void GameOver()
-    {
-        gameOverText.gameObject.SetActive(true);
-        gameManager.restartButton.gameObject.SetActive(true);
 
-    }*/
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PowerUp"))
+        {
+
+            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+            gameManager.UpdateScore(5);//score is increased by 5 and game object is destroyed  
+            hasPowerUp = true;
+            Destroy(other.gameObject); //makes powerup disappear
+            playerAudio.PlayOneShot(powerupConsume, 1.0f); //eating sound plays when player collides with powerup
+        }
+
+    }
+    /*void GameOver()
+   {
+       gameOverText.gameObject.SetActive(true);
+       gameManager.restartButton.gameObject.SetActive(true);
+
+   }*/
 
 
 }

@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 319803058549720566}
   - component: {fileID: 7621572427803634421}
   - component: {fileID: 2762399754406272801}
-  - component: {fileID: 1880374942600666296}
   m_Layer: 0
   m_Name: Monster_Bat_Prefab
   m_TagString: Player
@@ -193,6 +192,7 @@ Transform:
   m_Children:
   - {fileID: 4105486914630632}
   - {fileID: 4777461600425180}
+  - {fileID: 454375375879361667}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
 --- !u!111 &111413649560378406
@@ -296,12 +296,16 @@ MonoBehaviour:
   gravityModifier: 1
   isOnGround: 1
   gameOver: 0
+  hasPowerUp: 0
   explosionParticle: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
   dirtParticle: {fileID: 1438565936, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
   jumpSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
   crashSound: {fileID: 8300000, guid: e7ee25a47d63b46cdaf65480d62b405c, type: 3}
+  powerupConsume: {fileID: 0}
   playerAudio: {fileID: 0}
   projectilePrefab: {fileID: 4006752830601189912, guid: e3b0bf79b8fbfd4458ba9d5368d4c268, type: 3}
+  gameManager: {fileID: 0}
+  gameOverText: {fileID: 0}
 --- !u!82 &6209264195551990360
 AudioSource:
   m_ObjectHideFlags: 0
@@ -422,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5f15be3be87fe44900f1edd9142a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4673252023775396157, guid: f9bf79313350ae54dab6ede98fc1430f, type: 3}
+  enemyPrefab: {fileID: 3434936497642236683, guid: da1388dded75d8841a0eac45d5a7dfd1, type: 3}
 --- !u!114 &2762399754406272801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,23 +443,6 @@ MonoBehaviour:
   prefabToDestroy: {fileID: 7130553259912702913, guid: 1448997ad70145e418fc079de8585457, type: 3}
   playerAudio: {fileID: 6209264195551990360}
   powerupConsume: {fileID: 8300000, guid: 35b84eed34293864ea94275694cd69ba, type: 3}
---- !u!114 &1880374942600666296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625221395402176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca0b7904a21c3a84482d9d11ba308207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  prefabtoDestroy: {fileID: 7130553259912702913, guid: 1448997ad70145e418fc079de8585457, type: 3}
-  playerAudio: {fileID: 0}
-  powerupConsume: {fileID: 8300000, guid: 35b84eed34293864ea94275694cd69ba, type: 3}
-  pointValue: 5
 --- !u!1 &1809875507653856
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,4 +473,35 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4777461600425180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5465655053243350202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454375375879361667}
+  m_Layer: 0
+  m_Name: ProjectileSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454375375879361667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465655053243350202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4085869397129016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

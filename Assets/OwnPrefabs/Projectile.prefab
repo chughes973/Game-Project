@@ -14629,7 +14629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3434936497642236683, guid: da1388dded75d8841a0eac45d5a7dfd1, type: 3}
   playerAudio: {fileID: 0}
-  enemyKilled: {fileID: 0}
+  enemyKilled: {fileID: 8300000, guid: 88a647aa1d2a64de0b8000593319f012, type: 3}
 --- !u!1 &7976225978596944511
 GameObject:
   m_ObjectHideFlags: 0

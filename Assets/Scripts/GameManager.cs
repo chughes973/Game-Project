@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public MoveEnemyLeft moveEnemyLeft;
     public MoveLeft moveLeft;
     public bool isGameActive;
+    public bool goalScore;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
 
         totalScore = 0;
         scoreText.text = "Score: " + totalScore;
+        goalScore = false;
 
     }
 
@@ -55,6 +57,11 @@ public class GameManager : MonoBehaviour
         //score manager
         totalScore += scoreToAdd;
         scoreText.text = "Score: " + totalScore;
+        if (totalScore == 100)
+        {
+            goalScore  = true;
+            LevelTwo();
+        }
     }
 
     public void StartGame(int difficulty)
@@ -81,6 +88,11 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         gameOverScreen.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+
+    }
+
+    public void LevelTwo()
+    {
 
     }
 }

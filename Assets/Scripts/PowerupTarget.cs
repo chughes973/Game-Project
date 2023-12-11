@@ -13,7 +13,7 @@ public class PowerupTarget : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -29,6 +29,7 @@ public class PowerupTarget : MonoBehaviour
     {
         if (other.CompareTag("PowerUp"))
         {
+        
             gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
             gameManager.UpdateScore(5);//score is increased by 5 and game object is destroyed  
             Destroy(other.gameObject); //makes powerup disappear
