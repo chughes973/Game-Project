@@ -14,7 +14,6 @@ public class EnemySpawnManager : MonoBehaviour
     private Vector3 spawnPosEnemy = new Vector3(30, 0, 0);
     private float startDelay = 2.0f;
     public float repeatRate;
-    public float speed;
 
 
     // Start is called before the first frame update

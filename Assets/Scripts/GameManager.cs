@@ -10,19 +10,27 @@ public class GameManager : MonoBehaviour
     //variables
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
+    public TextMeshProUGUI timeText;
     public static int totalScore;
     public static int lives;
     public List <GameObject> targets;
     public Button restartButton;
     public Button levelButton;
+    public Button helpButton;
     public GameObject titleScreen;
     public GameObject gameOverScreen;
     public GameObject goalScreen;
+    public GameObject pauseScreen;
+    public GameObject helpScreen;
+    public Scene LunaTheBat1;
     public Scene LunaTheBat2;
+    public Scene LunaTheBat3;
+    public Scene LunaTheBat4;
     public EnemySpawnManager enemySpawnManager;
     public MoveEnemyLeft moveEnemyLeft;
     public MoveLeft moveLeft;
     public bool isGameActive;
+    private bool paused;
     public float goalScore;
     public bool goalScore1;
     public bool goalScore2;
@@ -45,6 +53,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ChangePaused();
+        }
         if (totalScore >= goalScore)
         {
             goalScore1 = true;
@@ -109,11 +121,48 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void LevelOne()
+    {
+        SceneManager.LoadScene("LunaTheBat1");
+
+    }
+
     public void LevelTwo()
     {
         SceneManager.LoadScene("LunaTheBat2");
+    }
+
+    public void LevelThree()
+    {
+        SceneManager.LoadScene("LunaTheBat3");
+
+    }
+
+    public void LevelFour()
+    {
+        SceneManager.LoadScene("LunaTheBat4");
+
+    }
 
 
+    void ChangePaused()
+    {
+        if (!paused)
+        {
+            paused = true;
+            pauseScreen.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            paused = false;
+            pauseScreen.SetActive(false);
+            Time.timeScale = 1;
+        }
+    }
+    public void HelpScreen()
+    {
+        helpScreen.gameObject.SetActive(true);
 
     }
 }
