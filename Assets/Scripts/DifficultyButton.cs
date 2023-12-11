@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DifficultyButton : MonoBehaviour
@@ -21,7 +22,10 @@ public class DifficultyButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.totalScore >= 100)
+        {
+
+        }
     }
 
 
@@ -29,6 +33,12 @@ void SelectLevel()
     {
         gameManager.StartGame(difficulty);
         Debug.Log(gameObject.name + "was clicked");
+
+    }
+
+    public void LevelTwo()
+    {
+        SceneManager.LoadScene("LunaTheBat2");
 
     }
 }

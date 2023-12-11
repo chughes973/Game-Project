@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
     private Vector3 spawnPosObs = new Vector3(25, 0, 0);
     private Vector3 spawnPosPU = new Vector3(50, 0, 0);
     private float startDelay = 2.0f;
-    private float repeatRate = 2.0f;
+    public float repeatRate;
     private PlayerController playerControllerScript;
     private GameManager gameManager;
 

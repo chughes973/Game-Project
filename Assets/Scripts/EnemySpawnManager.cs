@@ -12,8 +12,8 @@ public class EnemySpawnManager : MonoBehaviour
     private MoveEnemyLeft moveEnemyLeft;
 
     private Vector3 spawnPosEnemy = new Vector3(30, 0, 0);
-    public float startDelay = 2.0f;
-    private float repeatRate = 5f;
+    private float startDelay = 2.0f;
+    public float repeatRate;
     public float speed;
 
 

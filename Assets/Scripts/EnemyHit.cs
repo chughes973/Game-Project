@@ -26,6 +26,7 @@ public class EnemyHit : MonoBehaviour
         {
             gameManager.UpdateScore(10);//score is increased by 10 and game object is destroyed  
             Destroy(other.gameObject); //destroys projectile
+            Destroy(gameObject);
             //Destroy(enemyPrefab);//destroys enemy when hit
         }
     }

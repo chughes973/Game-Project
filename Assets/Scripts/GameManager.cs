@@ -14,14 +14,19 @@ public class GameManager : MonoBehaviour
     public static int lives;
     public List <GameObject> targets;
     public Button restartButton;
+    public Button levelButton;
     public GameObject titleScreen;
     public GameObject gameOverScreen;
     public GameObject goalScreen;
+    public Scene LunaTheBat2;
     public EnemySpawnManager enemySpawnManager;
     public MoveEnemyLeft moveEnemyLeft;
     public MoveLeft moveLeft;
     public bool isGameActive;
-    public bool goalScore;
+    public float goalScore;
+    public bool goalScore1;
+    public bool goalScore2;
+    public bool goalScore3;
 
     // Start is called before the first frame update
     void Start()
@@ -32,20 +37,23 @@ public class GameManager : MonoBehaviour
 
         totalScore = 0;
         scoreText.text = "Score: " + totalScore;
-        goalScore = false;
+        goalScore1= false;
+        goalScore2= false;
+        goalScore3= false;
 
     }
 
     private void Update()
     {
-        if (totalScore >= 100)
+        if (totalScore >= goalScore)
         {
-            goalScore = true;
-            goalScreen.gameObject.SetActive(true);
+            goalScore1 = true;
             isGameActive = false;
-            LevelTwo();
 
+            goalScreen.gameObject.SetActive(true);
+            levelButton.gameObject.SetActive(true);
         }
+
     }
     public void UpdateLives(int livesToRemove)
     {
@@ -70,6 +78,8 @@ public class GameManager : MonoBehaviour
         totalScore += scoreToAdd;
         scoreText.text = "Score: " + totalScore;
         
+        
+
     }
 
     public void StartGame(int difficulty)
@@ -101,6 +111,9 @@ public class GameManager : MonoBehaviour
 
     public void LevelTwo()
     {
+        SceneManager.LoadScene("LunaTheBat2");
+
+
 
     }
 }
