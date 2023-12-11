@@ -36,6 +36,17 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (totalScore >= 100)
+        {
+            goalScore = true;
+            goalScreen.gameObject.SetActive(true);
+            isGameActive = false;
+            LevelTwo();
+
+        }
+    }
     public void UpdateLives(int livesToRemove)
     {
         //managing lives
@@ -58,14 +69,7 @@ public class GameManager : MonoBehaviour
         //score manager
         totalScore += scoreToAdd;
         scoreText.text = "Score: " + totalScore;
-        if (totalScore == 100)
-        {
-            goalScore  = true;
-            goalScreen.gameObject.SetActive(true);
-            LevelTwo();
-
-
-        }
+        
     }
 
     public void StartGame(int difficulty)

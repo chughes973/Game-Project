@@ -1525,7 +1525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8853d644fb9c60743bf0a7b58c479139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
 --- !u!114 &835818923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   restartButton: {fileID: 922041425}
   titleScreen: {fileID: 649174306}
   gameOverScreen: {fileID: 549686968}
-  goalScreen: {fileID: 0}
+  goalScreen: {fileID: 1133018306}
   enemySpawnManager: {fileID: 431297579}
   moveEnemyLeft: {fileID: 0}
   moveLeft: {fileID: 0}
@@ -2300,6 +2300,30 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1155534564}
+    - target: {fileID: 7508579598282725099, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6825476
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508579598282725099, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7697994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508579598282725099, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
+      propertyPath: m_Center.x
+      value: -0.045668438
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508579598282725099, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
+      propertyPath: m_Center.y
+      value: 0.3889562
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508579598282725099, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
+      propertyPath: m_Center.z
+      value: 0.023713306
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508579598282725099, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

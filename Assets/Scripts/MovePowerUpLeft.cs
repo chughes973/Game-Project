@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovePowerUpLeft : MonoBehaviour
 {
-    public float speed = 20;
+    public float speed = 10;
     private PlayerController playerControllerScript;
     private float leftBound = -15;
     private GameManager gameManager;
