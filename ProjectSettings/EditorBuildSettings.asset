@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LunaTheBat2.unity
     guid: 5a9467544c64a554bb8d3c0a6597b01a
+  - enabled: 1
+    path: Assets/Scenes/LunaTheBat3.unity
+    guid: 63eb4a79b22514f4a83206089c806246
+  - enabled: 1
+    path: Assets/Scenes/LunaTheBat4.unity
+    guid: 10d28d105e26d8e449ff96868a7fd972
   m_configObjects: {}

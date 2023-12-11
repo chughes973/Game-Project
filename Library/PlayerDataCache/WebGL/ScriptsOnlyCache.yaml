@@ -2,7 +2,6 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CollisionWithEnemy
-    - CollisionWithEnemyProjectile
     - DestroyOutOfBounds
     - DetectCollisions
     - DifficultyButton
@@ -15,7 +14,6 @@ ScriptsOnlyBuild:
     - MoveRight
     - PlayerController
     - PowerUpObtained
-    - PowerupTarget
     - RepeatBackground
     - SpawnManager
     Unity.Play.Publisher.Editor.dll:
@@ -54,6 +52,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
   serializedClasses:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
@@ -76,6 +75,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
+    - UnityEngine.SceneManagement.Scene
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
@@ -87,16 +87,104 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: LevelTwo
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_volume
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: RestartGame
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_volume
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: StartGame
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: HelpScreen
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: LevelThree
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: RestartGame
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_volume
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: LevelOne
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: StartGame
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_volume
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: LevelFour
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: RestartGame
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_volume
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: LevelOne
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: StartGame
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_volume
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: RestartGame
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_volume
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: LevelOne
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: RestartGame
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: StartGame
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: set_volume
   sceneClasses:
-    Assets/Scenes/LunaTheBat.unity:
+    Assets/Scenes/LunaTheBat1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -150,59 +238,414 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1998}
     - Class: 114
-      Script: {instanceID: 2162}
+      Script: {instanceID: 2182}
     - Class: 114
-      Script: {instanceID: 2184}
+      Script: {instanceID: 2300}
     - Class: 114
-      Script: {instanceID: 2302}
+      Script: {instanceID: 2386}
     - Class: 114
-      Script: {instanceID: 2388}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 2604}
+      Script: {instanceID: 2624}
     - Class: 114
-      Script: {instanceID: 2626}
+      Script: {instanceID: 2804}
     - Class: 114
-      Script: {instanceID: 2806}
+      Script: {instanceID: 2924}
     - Class: 114
-      Script: {instanceID: 2926}
+      Script: {instanceID: 3090}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 3146}
     - Class: 114
-      Script: {instanceID: 3148}
+      Script: {instanceID: 3972}
     - Class: 114
-      Script: {instanceID: 3974}
+      Script: {instanceID: 4080}
     - Class: 114
-      Script: {instanceID: 4082}
+      Script: {instanceID: 4334}
     - Class: 114
-      Script: {instanceID: 4336}
+      Script: {instanceID: 4580}
     - Class: 114
-      Script: {instanceID: 4582}
+      Script: {instanceID: 4814}
     - Class: 114
-      Script: {instanceID: 4816}
+      Script: {instanceID: 4970}
     - Class: 114
-      Script: {instanceID: 5044}
+      Script: {instanceID: 5042}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 5046}
     - Class: 114
-      Script: {instanceID: 5330}
+      Script: {instanceID: 5328}
     - Class: 114
-      Script: {instanceID: 5388}
+      Script: {instanceID: 5466}
     - Class: 114
-      Script: {instanceID: 5468}
+      Script: {instanceID: 5604}
     - Class: 114
-      Script: {instanceID: 5606}
+      Script: {instanceID: 5754}
     - Class: 114
-      Script: {instanceID: 5756}
+      Script: {instanceID: 6072}
     - Class: 114
-      Script: {instanceID: 6074}
+      Script: {instanceID: 6088}
     - Class: 114
-      Script: {instanceID: 6090}
+      Script: {instanceID: 6822}
     - Class: 114
-      Script: {instanceID: 6824}
+      Script: {instanceID: 7114}
     - Class: 114
-      Script: {instanceID: 7116}
+      Script: {instanceID: 7386}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/LunaTheBat2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 7388}
+      Script: {instanceID: 1596}
+    - Class: 114
+      Script: {instanceID: 1612}
+    - Class: 114
+      Script: {instanceID: 1998}
+    - Class: 114
+      Script: {instanceID: 2300}
+    - Class: 114
+      Script: {instanceID: 2386}
+    - Class: 114
+      Script: {instanceID: 2602}
+    - Class: 114
+      Script: {instanceID: 2624}
+    - Class: 114
+      Script: {instanceID: 2804}
+    - Class: 114
+      Script: {instanceID: 2924}
+    - Class: 114
+      Script: {instanceID: 3090}
+    - Class: 114
+      Script: {instanceID: 3146}
+    - Class: 114
+      Script: {instanceID: 4580}
+    - Class: 114
+      Script: {instanceID: 4814}
+    - Class: 114
+      Script: {instanceID: 4970}
+    - Class: 114
+      Script: {instanceID: 5042}
+    - Class: 114
+      Script: {instanceID: 5046}
+    - Class: 114
+      Script: {instanceID: 5328}
+    - Class: 114
+      Script: {instanceID: 5466}
+    - Class: 114
+      Script: {instanceID: 5604}
+    - Class: 114
+      Script: {instanceID: 5754}
+    - Class: 114
+      Script: {instanceID: 6072}
+    - Class: 114
+      Script: {instanceID: 6088}
+    - Class: 114
+      Script: {instanceID: 6822}
+    - Class: 114
+      Script: {instanceID: 7114}
+    - Class: 114
+      Script: {instanceID: 7386}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/LunaTheBat3.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1596}
+    - Class: 114
+      Script: {instanceID: 1612}
+    - Class: 114
+      Script: {instanceID: 1998}
+    - Class: 114
+      Script: {instanceID: 2300}
+    - Class: 114
+      Script: {instanceID: 2386}
+    - Class: 114
+      Script: {instanceID: 2602}
+    - Class: 114
+      Script: {instanceID: 2624}
+    - Class: 114
+      Script: {instanceID: 2804}
+    - Class: 114
+      Script: {instanceID: 2924}
+    - Class: 114
+      Script: {instanceID: 3090}
+    - Class: 114
+      Script: {instanceID: 3146}
+    - Class: 114
+      Script: {instanceID: 4580}
+    - Class: 114
+      Script: {instanceID: 4814}
+    - Class: 114
+      Script: {instanceID: 4970}
+    - Class: 114
+      Script: {instanceID: 5042}
+    - Class: 114
+      Script: {instanceID: 5046}
+    - Class: 114
+      Script: {instanceID: 5328}
+    - Class: 114
+      Script: {instanceID: 5466}
+    - Class: 114
+      Script: {instanceID: 5604}
+    - Class: 114
+      Script: {instanceID: 5754}
+    - Class: 114
+      Script: {instanceID: 6072}
+    - Class: 114
+      Script: {instanceID: 6088}
+    - Class: 114
+      Script: {instanceID: 6822}
+    - Class: 114
+      Script: {instanceID: 7114}
+    - Class: 114
+      Script: {instanceID: 7386}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/LunaTheBat4.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1596}
+    - Class: 114
+      Script: {instanceID: 1612}
+    - Class: 114
+      Script: {instanceID: 1998}
+    - Class: 114
+      Script: {instanceID: 2300}
+    - Class: 114
+      Script: {instanceID: 2386}
+    - Class: 114
+      Script: {instanceID: 2602}
+    - Class: 114
+      Script: {instanceID: 2624}
+    - Class: 114
+      Script: {instanceID: 2804}
+    - Class: 114
+      Script: {instanceID: 2924}
+    - Class: 114
+      Script: {instanceID: 3090}
+    - Class: 114
+      Script: {instanceID: 3146}
+    - Class: 114
+      Script: {instanceID: 4580}
+    - Class: 114
+      Script: {instanceID: 4814}
+    - Class: 114
+      Script: {instanceID: 4970}
+    - Class: 114
+      Script: {instanceID: 5042}
+    - Class: 114
+      Script: {instanceID: 5046}
+    - Class: 114
+      Script: {instanceID: 5328}
+    - Class: 114
+      Script: {instanceID: 5466}
+    - Class: 114
+      Script: {instanceID: 5604}
+    - Class: 114
+      Script: {instanceID: 5754}
+    - Class: 114
+      Script: {instanceID: 6072}
+    - Class: 114
+      Script: {instanceID: 6088}
+    - Class: 114
+      Script: {instanceID: 6822}
+    - Class: 114
+      Script: {instanceID: 7114}
+    - Class: 114
+      Script: {instanceID: 7386}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -308,7 +751,7 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
-      Hash: f1f6f0e39761c8728b5f262c280edae5
+      Hash: 1cfaa5302b761a7ae06db89b267d29df
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: EnemySpawnManager
@@ -318,12 +761,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerEnterMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 2e9965ed510f61887131d0bb3105f9aa
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CollisionWithEnemyProjectile
   - hash:
       serializedVersion: 2
       Hash: 63815508dfd6cf329d5c593ac8e76888
@@ -368,7 +805,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 85f38e11a2b43f7724cbf90447c3053e
+      Hash: 423725e7f419667036c435095737926b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerController
@@ -410,7 +847,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 83943da45c6d95edde59bad000079374
+      Hash: 34d213245fa6e315a4b4087d005cb799
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SpawnManager
@@ -974,7 +1411,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: 8b071d1203a19ec2b9a9b44311c7f0e5
+      Hash: 7e30cf7738aa6d8495db8f79ba0114f7
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -1388,6 +1825,9 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 20
   scenePathNames:
-  - Assets/Scenes/LunaTheBat.unity
+  - Assets/Scenes/LunaTheBat1.unity
+  - Assets/Scenes/LunaTheBat2.unity
+  - Assets/Scenes/LunaTheBat3.unity
+  - Assets/Scenes/LunaTheBat4.unity
   playerPath: C:/Users/hughe/Desktop/Create with Code - Colleen/Game Project/WebGL
     Builds

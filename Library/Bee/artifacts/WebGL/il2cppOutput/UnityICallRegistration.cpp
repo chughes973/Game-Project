@@ -262,6 +262,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_AudioSource_PlayOneShotHelper();
 		Register_UnityEngine_AudioSource_PlayOneShotHelper();
 
+		//System.Void UnityEngine.AudioSource::set_volume(System.Single)
+		void Register_UnityEngine_AudioSource_set_volume();
+		Register_UnityEngine_AudioSource_set_volume();
+
 	//End Registrations for type : UnityEngine.AudioSource
 
 	//Start Registrations for type : UnityEngine.Behaviour
@@ -3189,6 +3193,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Single UnityEngine.Time::get_unscaledTime()
 		void Register_UnityEngine_Time_get_unscaledTime();
 		Register_UnityEngine_Time_get_unscaledTime();
+
+		//System.Void UnityEngine.Time::set_timeScale(System.Single)
+		void Register_UnityEngine_Time_set_timeScale();
+		Register_UnityEngine_Time_set_timeScale();
 
 	//End Registrations for type : UnityEngine.Time
 
