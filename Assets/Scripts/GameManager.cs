@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Button restartButton;
     public GameObject titleScreen;
     public GameObject gameOverScreen;
+    public GameObject goalScreen;
     public EnemySpawnManager enemySpawnManager;
     public MoveEnemyLeft moveEnemyLeft;
     public MoveLeft moveLeft;
@@ -60,7 +61,10 @@ public class GameManager : MonoBehaviour
         if (totalScore == 100)
         {
             goalScore  = true;
+            goalScreen.gameObject.SetActive(true);
             LevelTwo();
+
+
         }
     }
 
